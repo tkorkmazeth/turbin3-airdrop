@@ -6,7 +6,9 @@ import wallet from "./dev-wallet.json";
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 
 const connection = new Connection(clusterApiUrl("devnet"));
-const github = Buffer.from("https://github.com/princeadxisrael", "utf8");
+const github = Buffer.from("tkorkmazeth", "utf8");
+
+console.log("KEYPAİRRR", keypair.publicKey);
 
 const provider = new AnchorProvider(connection, new Wallet(keypair), {
   commitment: "confirmed",
